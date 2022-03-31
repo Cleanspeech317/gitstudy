@@ -187,6 +187,8 @@ class MMGCN(torch.nn.Module):
     #     return precision/length, recall/length, ndcg/length
     def accuracy(self, dataset, topk=10, neg_num=1000):
         #dataset是什么，应该是和num_user行的ndarray
+
+
         #data是dataset中的一行，应该代表的是一个用户的交互
         all_set = set(list(np.arange(neg_num)))
         sum_pre = 0.0
